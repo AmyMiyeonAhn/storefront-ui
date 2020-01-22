@@ -6,6 +6,8 @@ body {
   font-weight: $body-font-weight-primary;
   margin: 0;
   padding: 0;
+  line-height: 1.6; // New property
+  -webkit-font-smoothing: antialiased; // New property
   @media (min-width: $desktop-min) {
     font-size: $body-font-size-desktop;
   }
