@@ -15,6 +15,7 @@ $breadcrumbs__current-color: $c-gray-variant !default;
   font-family: $breadcrumbs-font-family;
   font-size: $breadcrumbs-font-size;
   font-weight: $breadcrumbs-font-weight;
+
   &__list {
     list-style: none;
     padding: 0;
@@ -35,6 +36,11 @@ $breadcrumbs__current-color: $c-gray-variant !default;
   }
   &__link {
     cursor: pointer;
+    color: $breadcrumbs__link-color;
+  }
+
+  &__link:hover {
+    text-decoration: underline;
     color: $breadcrumbs__link-color;
   }
   &__current {

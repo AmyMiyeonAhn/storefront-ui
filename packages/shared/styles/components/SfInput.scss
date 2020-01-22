@@ -44,10 +44,14 @@ $input__password-icon-width: 1.4rem !default;
     box-sizing: border-box;
     display: block;
     width: 100%;
-    height: 100%;
-    padding: 5px 0;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: $input-padding; // New variable
     border-width: 0 0 1px 0;
-    border-color: $c-light;
+    border-color: $input-border-color; // New variable
     background-color: transparent;
     outline: none;
     font-family: inherit;
@@ -64,6 +68,7 @@ $input__password-icon-width: 1.4rem !default;
     }
     &:required ~ #{$this}__label::after {
       content: " *";
+      color: $input__label-after-color; // New property & New variable
     }
     &:disabled ~ #{$this}__label {
       color: $input-color-disabled;

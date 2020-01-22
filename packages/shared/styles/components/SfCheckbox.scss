@@ -37,13 +37,19 @@ $checkbox__checkmark-transition: background-color 0.25s
     align-items: center;
     cursor: pointer;
   }
+
+  &__container:hover { // New selector added by Amy
+    text-decoration: $checkbox__container-hover-text-style; // New variable
+  }
+
   &__checkmark {
     display: flex;
     align-items: center;
     justify-content: center;
     width: $checkbox__checkmark-size;
     height: $checkbox__checkmark-size;
-    border: 1px solid $checkbox__checkmark-secondary-color;
+    border: $checkbox__checkmark-border; // New variable
+    border-radius: $checkbox__checkmark-border-radius; // New property & New variable
     box-sizing: border-box;
     transition: $checkbox__checkmark-transition;
     @media screen and (min-width: $desktop-min) {
@@ -70,7 +76,8 @@ $checkbox__checkmark-transition: background-color 0.25s
     }
   }
   &__label {
-    margin-left: $spacer-big;
+    margin-left: $checkbox__label-margin-left; // New variable
+    margin-bottom: $checkbox__label-margin-bottom; // New property & New variable
     display: flex;
   }
 }

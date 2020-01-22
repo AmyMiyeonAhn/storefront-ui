@@ -15,10 +15,14 @@ storiesOf("Atoms|Button", module)
         default: options(
           "CSS modifiers",
           {
+            /* LC Customised CSS modifiers
+            "sf-button--bg-orange": "sf-button--bg-orange",
+            "sf-button--l": "sf-button--l",
+            "sf-button--s": "sf-button--s", */
             "sf-button--outline": "sf-button--outline",
             "sf-button--text": "sf-button--text",
             "sf-button--full-width": "sf-button--full-width",
-            "color-primary": "color-primary",
+            "color-primary": "colsor-primary",
             "color-secondary": "color-secondary",
             "color-warning": "color-warning",
             "color-danger": "color-danger",

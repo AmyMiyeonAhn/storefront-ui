@@ -22,7 +22,8 @@ $button--outline-border: 2px !default;
   font-weight: $button-font-weight;
   line-height: $button-line-height;
   transition: background-color 150ms linear, color 150ms linear;
-  text-transform: uppercase;
+  text-transform: $button-text-transform; // New variables
+  border-radius: $button-border-radius; // New property & New variables
   cursor: pointer;
   @media screen and (min-width: $desktop-min) {
     padding: $button-padding;
@@ -35,12 +36,13 @@ $button--outline-border: 2px !default;
     width: 100%;
   }
   &--outline {
-    color: $c-primary;
-    border: solid $button--outline-border $c-primary;
+    padding: $button__outline-padding; // New property & new variables
+    color: $button__outline-color;
+    border: solid $button--outline-border $button__outline-border-color; // New variables
     background-color: transparent !important;
     &:hover {
-      background-color: $c-primary-variant !important;
-      color: $c-on-primary !important;
+      background-color: $button__outline-hover-background-color !important; // New variables
+      color: $button__outline-hover-color !important; // New variables
     }
     @each $color, $map in $colors-map {
       $bg: map-get($map, "bg");
@@ -60,11 +62,12 @@ $button--outline-border: 2px !default;
     padding: 0;
     margin: 0;
     background-color: transparent;
-    color: $c-text;
+    color: $button__text-color; // New variables
     text-transform: none;
-    text-decoration: underline;
+    text-decoration: $button__text-text-decoration;
     &:hover {
       background-color: transparent;
+      text-decoration: $button__text-hover-text-decoration;
     }
     @each $color, $map in $colors-map {
       $text: map-get($map, "bg");
@@ -88,4 +91,31 @@ $button--outline-border: 2px !default;
       color: $c-gray;
     }
   }
+
+  // LC Customised CSS modifiers (not in use)
+
+  &--bg-orange{
+    background-color: $_c-crafts-orange;
+  }
+
+  &--l{
+    padding: 0 24px;
+    min-height: 48px;
+    font-size: $font-size-extra-big-desktop;
+    @media screen and (min-width: $desktop-min) {
+      padding: 0 24px;
+      font-size: $font-size-extra-big-desktop;
+    }
+  }
+
+  &--s{
+    padding: 0 18px;
+    min-height: 32px;
+    font-size: $font-size-small-desktop;
+    @media screen and (min-width: $desktop-min) {
+      padding: 0 18px;
+      font-size: $font-size-small-desktop;
+    }
+  }
+  
 }
