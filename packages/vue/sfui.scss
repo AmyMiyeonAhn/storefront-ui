@@ -1,0 +1,301 @@
+// global override excluding scoped components
+
+// LC Fonts
+$brand-font: "Sofia Pro";
+$font-fallback: Arial, Helvetica, sans-serif;
+@font-face {
+  font-family: $brand-font;
+  src: url("https://skin-loveknitting.global.ssl.fastly.net/skin/frontend/broadmargins/default/fonts/sofia_pro_regular.woff");
+  font-weight: 400;
+}
+  
+@font-face {
+  font-family: $brand-font;
+  src: url("https://skin-loveknitting.global.ssl.fastly.net/skin/frontend/broadmargins/default/fonts/sofia_pro_semi_bold.woff");
+  font-weight: 600;
+}
+
+$body-font-family-primary: $brand-font, $font-fallback;
+$body-font-family-secondary: $brand-font, $font-fallback;
+
+
+// LC font weight
+$body-font-weight-primary: 400 !default;
+$body-font-weight-secondary: 400 !default;
+
+$h1-font-weight-desktop: 600 !default;
+$h2-font-weight-desktop: 600 !default;
+$h3-font-weight-desktop: 600 !default;
+$h4-font-weight-desktop: 600 !default;
+
+$h1-font-weight-mobile: 600 !default;
+$h2-font-weight-mobile: 600 !default;
+$h3-font-weight-mobile: 600 !default;
+$h4-font-weight-mobile: 600 !default;
+
+
+// LC Font sizes
+$font-size-extra-small-desktop: 11px !default; //zeta
+$font-size-small-desktop: 13px !default; // gamma
+$font-size-regular-desktop: 14px !default; // delta
+$font-size-big-desktop: 16px !default; // beta
+$font-size-extra-big-desktop: 18px !default; // alpha
+
+$font-size-extra-small-mobile: $font-size-extra-small-desktop !default;
+$font-size-small-mobile: $font-size-small-desktop !default;
+$font-size-regular-mobile: $font-size-regular-desktop !default;
+$font-size-big-mobile: $font-size-big-desktop !default;
+$font-size-extra-big-mobile: $font-size-extra-big-desktop !default;
+
+$h1-font-size-desktop: 30px !default;
+$h2-font-size-desktop: 24px !default;
+$h3-font-size-desktop: 18px !default;
+$h4-font-size-desktop: 18px !default;
+$h5-font-size-desktop: 18px !default;
+
+$h1-font-size-mobile: 28px !default;
+$h2-font-size-mobile: 20px !default;
+$h3-font-size-mobile: 18px !default;
+$h4-font-size-mobile: 18px !default;
+$h5-font-size-desktop: 18px !default;
+
+
+
+// LC colours
+// Should NOT be used directly for theming or component styles
+
+$c-black: #333333!default;
+$c-white: hsl(0, 0%, 100%) !default;
+
+$_c-green-primary: #3ad48a; // green
+$_c-green-secondary: #ddf8ee; // light-green
+$_c-green-promo:  #c7e5c7; // promo-green
+
+$_c-dark-primary: #333333; // black
+$_c-dark-secondary: #5f6062; // dark gray
+$_c-gray-primary: #d6d6d7; // gray - disabled
+$_c-gray-secondary: #EEEEEE; // light gray
+$_c-light-primary: #F4F4F4;  // very light gray
+$_c-light-secondary: hsl(0, 0%, 100%); //white
+
+$_c-pink-primary: #F1544A; // red
+$_c-pink-secondary: #ffeef3; // light-red
+$_c-yellow-primary: #FFD140; // yellow
+$_c-yellow-secondary: #fff7c7; // light-yellow
+$_c-blue-primary: #0073cc; // blue
+$_c-blue-secondary: #ddf5ff; // light-blue
+
+$_c-crafts-orange: #FFAB15; // New color variable
+$_c-crafts-orange-secondary: #fff3dc; // New color variable
+$_c-knitting-blue: #29c0d1; // New color variable
+$_c-crochet-pink: #FE5A8C; // New color variable
+
+
+/* START: Theme color variables */
+
+// Body and text defaults
+$c-body: $c-white !default;
+$c-text: $_c-dark-primary !default;
+$c-text-muted: $_c-gray-primary !default;
+$c-link: $_c-blue-primary !default;
+$c-link-hover: $_c-blue-primary !default;
+
+/* Brand colors */
+
+// Primary
+/* Should be used to drive attention to the main tasks that should be done while using the app.
+ * It is meant to be used in major interactive elements of the page. */
+ $c-primary: $_c-crafts-orange !default;
+ $c-primary-variant: $_c-crafts-orange-secondary !default;
+ $c-on-primary: $c-white !default;
+ 
+ // Secondary
+ /* Should be used to drive attention in the elements with relevant info,
+  * but where the user is not intended to take action. */
+ $c-secondary: $_c-dark-primary !default;
+ $c-secondary-variant: $_c-dark-secondary !default;
+ $c-on-secondary: $c-white !default;
+
+/* Base colors */
+
+// Light
+$c-light: $_c-light-primary !default;
+$c-light-variant: $_c-light-secondary !default;
+$c-on-light: $c-black !default;
+
+// Gray
+$c-gray: $_c-gray-primary !default;
+$c-gray-variant: $_c-gray-secondary !default;
+$c-on-gray: $c-black !default;
+
+// Dark
+$c-dark: $_c-dark-primary !default;
+$c-dark-variant: $_c-dark-secondary !default;
+$c-on-dark: $c-white !default;
+
+/* Context colors */
+
+// Info
+$c-info: $_c-blue-primary !default;
+$c-info-variant: $_c-blue-secondary !default;
+$c-on-info: $c-white !default;
+
+// Success
+$c-success: $_c-green-primary !default;
+$c-success-variant: $_c-green-secondary !default;
+$c-on-success: $c-white !default;
+
+// Warning
+$c-warning: $_c-yellow-primary !default;
+$c-warning-variant: $_c-yellow-secondary !default;
+$c-on-warning: $c-white !default;
+
+// Danger
+$c-danger: $_c-pink-primary !default;
+$c-danger-variant: $_c-pink-secondary !default;
+$c-on-danger: $c-white !default;
+
+/* END: Theme color variables */
+
+
+// LC - Spacing
+$spacer-small: 3px; // 4px
+$spacer: 6px; // 8px 
+$spacer-medium: 12px; // 16px
+$spacer-big: 18px; // 20px
+$spacer-extra-big: 36px; // 40px 
+
+
+
+// global override including scoped componentss
+
+// ATOMS - Breadcrumbs
+$breadcrumbs-font-family: $body-font-family-primary !default;
+$breadcrumbs-font-size: $font-size-small-desktop !default;
+$breadcrumbs-font-weight: $body-font-weight-primary !default;
+$breadcrumbs-line-height: 1.35 !default;
+$breadcrumbs__link-color: $_c-dark-secondary !default;
+$breadcrumbs__item-padding: 9px !default;
+$breadcrumbs__item-color: $_c-gray-primary !default;
+$breadcrumbs__item-separator-color: $breadcrumbs__link-color !default;
+$breadcrumbs__item-separator: ">" !default;
+$breadcrumbs__current-color: $_c-dark-primary !default;
+
+
+// ATOMS - Badge
+$badge-padding: 6px 9px !default;
+$badge-color: $c-white !default;
+$badge-background-color: $c-primary;
+$badge-font-family: $body-font-family-primary !default;
+$badge-font-size: $font-size-small-desktop !default;
+$badge-font-weight: $body-font-weight-primary !default;
+$badge-line-height: 1.35 !default;
+
+
+// ATOMS - Checkbox
+$checkbox-font-family: $body-font-family-primary !default;
+$checkbox-font-size: $font-size-big-desktop !default;
+$checkbox-font-size-desktop: $font-size-big-desktop !default;
+$checkbox-font-weight: $body-font-weight-primary !default;
+$checkbox-line-height: 1.35 !default;
+
+$checkbox__checkmark-size: 24px !default;
+$checkbox__checkmark-size-desktop: 24px !default;
+$checkbox__checkmark-primary-color: $c-primary !default;
+$checkbox__checkmark-secondary-color: $_c-gray-primary !default;
+$checkbox__checkmark-transition: background-color 0.25s
+    cubic-bezier(1, 0.5, 0.8, 1),
+  border-color 0.25s cubic-bezier(1, 0.5, 0.8, 1),
+  opacity 0.25s cubic-bezier(1, 0.5, 0.8, 1) !default;
+
+// ATOMS - Checkbox: New variables
+$checkbox__container-hover-text-style: underline;
+$checkbox__checkmark-border: 2px solid $checkbox__checkmark-secondary-color !default;
+$checkbox__checkmark-border-radius: 2px;
+$checkbox__label-margin-left: 12px;
+$checkbox__label-margin-bottom: 3px;
+
+
+// ATOMS - Button
+$button-padding: 9px 24px 12px !default;
+$button-padding-desktop: $button-padding !default;
+$button-color: $c-on-dark !default;
+$button-background-color: $_c-dark-primary !default;
+$button-font-family: $body-font-family-secondary !default;
+$button-font-size: $font-size-big-mobile !default;
+$button-font-size-desktop: $font-size-big-desktop !default;
+$button-font-weight: $body-font-weight-secondary !default;
+$button-line-height: 1.35 !default;
+$button--outline-border: 2px !default;
+
+// ATOMS - Button: New variables
+$button-text-transform: capitalize;
+$button-border-radius: 2px;
+$button__outline-padding : 7px 22px 10px !default;
+$button__outline-color: $_c-dark-primary;
+$button__outline-border-color: $_c-dark-primary;
+$button__outline-hover-background-color: $_c-dark-primary !default;
+$button__outline-hover-color: $c-on-primary !default;
+$button__text-color: $c-link;
+$button__text-text-decoration: none;
+$button__text-hover-text-decoration: none;
+
+
+// ATOMS - Input
+$input-color: $_c-dark-secondary !default;
+$input-color-active: $_c-dark-primary !default;
+$input-color-invalid: $_c-pink-primary !default;
+$input-color-disabled: $c-dark-variant !default;
+$input-font-family: $body-font-family-secondary !default;
+$input-font-size: $font-size-big-mobile !default;
+$input-font-size-desktop: $font-size-big-desktop !default;
+$input-font-weight: $body-font-weight-secondary !default;
+$input-line-height: 1.6 !default;
+$input__label-focus-font-size: $font-size-small-desktop !default;
+$input__label-focus-font-size-desktop: $font-size-small-desktop !default;
+$input__label-transition: all 150ms ease-in-out !default;
+$input__bar-transition: all 150ms ease-in-out !default;
+$input__error-message-font-family: $body-font-family-primary !default;
+$input__error-message-font-size: $font-size-small-mobile !default;
+
+// ATOMS - input: New variables
+$input__label-after-color: $_c-pink-primary;
+$input-padding: 9px 0;
+$input-border-color: $_c-gray-primary;
+
+
+// ATOMS - Price
+$price-font-family: $body-font-family-primary !default;
+$price-font-size: $font-size-big-mobile !default;
+$price-font-size-desktop: $font-size-big-desktop !default;
+$price-font-weight: $body-font-weight-secondary !default;
+$price-line-height: 1.6 !default;
+$price__old-font-size: $font-size-small-mobile !default;
+$price__old-font-size-desktop: $font-size-small-desktop !default;
+$price--big-font-size: $font-size-big-desktop !default;
+$price--big-font-size-desktop: $font-size-extra-big-desktop !default;
+$price--big__old-font-size: $font-size-regular-mobile !default;
+$price--big__old-font-size-desktop: $font-size-regular-desktop !default;
+
+// ATOMS - Price: New variables
+$price__old-color: $_c-dark-secondary;
+
+
+// ATOMS - Rating
+$rating__icon-positive-fill: $c-primary !default;
+$rating__icon-negative-fill: $_c-gray-primary !default;
+
+
+// MOLECULES - Notification
+$notification-max-width-desktop: 35rem !default;
+$notification-border-radius-desktop: 2px !default;
+$notification-font-family: $body-font-family-primary !default;
+$notification-font-family-desktop: $body-font-family-secondary !default;
+$notification-font-size: $font-size-big-desktop !default;
+$notification-font-weight: $body-font-weight-secondary !default;
+$notification-font-weight-desktop: $body-font-weight-primary !default;
+$notification-box-shadow-desktop: 0 4px 14px 0 rgba(0, 0, 0, 0.2) !default;
+$notification__title-font-size-desktop: $font-size-extra-big-desktop !default;
+$notification__title-font-weight: 300 !default;
+$notification__title-font-weight-desktop: 700 !default;
+$notification__action-font-weight: 500 !default;
